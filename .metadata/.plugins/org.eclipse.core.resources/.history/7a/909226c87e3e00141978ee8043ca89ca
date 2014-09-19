@@ -1,0 +1,10 @@
+package be.intec.frituurfrida.interfaces;
+
+
+public interface MainDaoInterface {
+	
+	
+
+
+
+}

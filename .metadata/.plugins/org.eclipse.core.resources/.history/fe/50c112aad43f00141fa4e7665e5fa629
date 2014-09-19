@@ -1,0 +1,22 @@
+package be.intec.frituurfrida.persistence;
+
+import be.intec.frituurfrida.model.Usuarios;
+
+public class testemain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		UserDao dao = new UserDao();
+				Usuarios u =new Usuarios();
+				u.setEmail("aaaa");
+				u.setEndereco("abbbb");
+				u.setEmail("axxx@");
+				u.setNome("aaaaa");
+				u.setSenha("12a31");
+				dao.add(u);
+		
+	}
+
+}

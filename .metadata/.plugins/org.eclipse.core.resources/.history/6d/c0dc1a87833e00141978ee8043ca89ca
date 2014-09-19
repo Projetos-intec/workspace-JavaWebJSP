@@ -1,0 +1,10 @@
+package be.intec.frituurfrida.model;
+
+public abstract class LoginUsuario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

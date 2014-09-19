@@ -1,0 +1,134 @@
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	color: #333;
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	padding: 10px;
+}
+
+h1 {
+	font-size: 24px;
+	color: #539FAD;
+}
+
+table {
+	margin: 1em 0;
+	border-collapse: collapse;
+	
+}
+
+table caption {
+	text-align: left;
+	font-weight: bold;
+	padding: 0 0 .3em;
+	color: #003d5d;
+}
+
+table td,table th {
+	text-align: left;
+	border: 1px solid #b1d2e4;
+	padding: 3px 20px;
+	vertical-align: top;
+}
+
+table th {
+	font-weight: bold;
+    background: #EEE url(pattern.png) top left repeat;
+}
+
+table thead th {
+	background: #ecf7fd;
+}
+
+header {
+	height: 200px;
+}
+
+nav {
+	width: auto;
+	margin: 0 5px 0 5px;
+}
+
+nav ul,
+nav li nav a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font-family: Helvetica;
+  line-height: 1;
+}
+
+nav ul {
+  zoom: 1;
+  background: #539fad url(pattern.png) top left repeat;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #3a707a;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+nav ul:before {
+  content: '';
+  display: block;
+}
+nav ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+nav a,
+nav a:link,
+nav a:visited {
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 -1px 1px #214046;
+  border-right: 1px solid #3a707a;
+}
+nav a:hover {
+  color: #214046;
+  text-shadow: 0 1px 1px #76b2bd;
+}
+nav li {
+  float: left;
+  border-right: 1px solid #64a9b5;
+}
+nav li:hover {
+  background: #4a8f9c url(pattern.png) top left repeat;
+}
+nav li:first-child {
+  border-left: none;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+header, article, footer {
+	padding: 2px 5px 10px 5px;
+}
+
+footer {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+#logo {
+	margin: 10px 0 -23px 10px;
+	float: left;
+}
+
+#demotitel {
+	margin: 140px 10px 0 0;
+	float: right;
+	
+}

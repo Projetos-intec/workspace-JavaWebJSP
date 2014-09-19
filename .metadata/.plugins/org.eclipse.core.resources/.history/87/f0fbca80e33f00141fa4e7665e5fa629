@@ -1,0 +1,14 @@
+package be.intec.frituurfrida.model;
+
+public class Produtos {
+
+	
+	
+	private int id;
+	private String prodNome;
+	private String descricao;
+	private double preco_S ;
+	private double preco_M ;
+	private double preco_L ;
+	private String tamanho; 
+}

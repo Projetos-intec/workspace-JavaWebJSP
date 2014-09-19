@@ -1,0 +1,79 @@
+package be.intec.frituurfrida.model;
+
+public class Usuarios extends LoginUsuario {
+
+	private long idUsuario;
+	private String nome;
+	private String endereco;
+	private String tel;
+	private String email;
+	private String passwords;
+
+	public Usuarios() {
+
+
+	}
+
+	public Usuarios(int id, String email, String senha) {
+		super(id, email, senha);
+		// TODO Auto-generated constructor stub
+
+	}
+
+
+
+public long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(long id) {
+		this.idUsuario = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPasswords() {
+		return passwords;
+	}
+
+	public void setPasswords(String passwords) {
+		this.passwords = passwords;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "Usuarios [idUsuario=" + idUsuario
+				+ ", nome=" + nome + ", endereco=" + endereco + ", tel=" + tel
+				+ ", email=" + email + ", passwords=" + passwords + "]";
+	}
+}

@@ -1,0 +1,5 @@
+package be.intec.frituurfrida.persistence;
+
+public class DbConection {
+
+}

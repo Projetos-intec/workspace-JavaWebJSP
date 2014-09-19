@@ -1,0 +1,42 @@
+package be.intec.frituurfrida;
+
+import java.io.IOException;
+import java.util.Calendar;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("bemVindo")
+public class StartServelet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private static final String VIEW = "/index.jsp";
+	private ServletRequest request;
+	private RequestDispatcher dispatcher;
+	private ServletResponse response;
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		Calendar calendar = Calendar.getInstance();
+		int uur = calendar.get(Calendar.HOUR_OF_DAY);
+		String msg;
+		if (uur >= 6 && uur < 12) {
+			msg = "Bom Dia ";
+		} else if (uur >= 12 && uur < 18) {
+			msg = "Bom tarde ";
+		} else {
+			msg = "Bom noite ";
+		}
+		request.setAttribute("msg", msg);
+		dispatcher = request.getRequestDispatcher(VIEW);
+		dispatcher.forward(request, response);
+
+	}
+}

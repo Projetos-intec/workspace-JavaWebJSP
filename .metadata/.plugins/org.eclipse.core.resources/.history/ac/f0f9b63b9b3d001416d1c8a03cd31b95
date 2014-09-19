@@ -1,0 +1,45 @@
+package be.intec.frituurfrida;
+
+import java.io.IOException;
+import java.util.Calendar;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/welkom")
+public class StartServelet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private static final String VIEW = "/WEB-INF/JSP/index.jsp";
+
+	private RequestDispatcher dispatcher;
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		String msg = getMsgDay();
+
+		req.setAttribute("msg", msg);
+		dispatcher = req.getRequestDispatcher(VIEW);
+		dispatcher.forward(req, resp);
+
+	}
+
+	private String getMsgDay() {
+		Calendar calendar =  Calendar.getInstance();
+		int uur = calendar.get(Calendar.HOUR_OF_DAY);
+		String msg;
+		if (uur >= 6 && uur < 12) {
+			msg = "Bom Dia ";
+		} else if (uur >= 12 && uur < 18) {
+			msg = "Bom tarde ";
+		} else {
+			msg = "Bom noite ";
+		}
+		return msg;
+	}
+}

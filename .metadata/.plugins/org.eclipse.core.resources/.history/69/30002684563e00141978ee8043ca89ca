@@ -1,0 +1,12 @@
+package be.intec.frituurfrida.model;
+
+public class Usuarios {
+	
+	private long id ;
+	private String nome;
+	private String endereco;
+	private String tel;
+	private String email;
+	
+
+}

@@ -1,0 +1,51 @@
+package be.intec.frituurfrida.model;
+
+import java.io.Serializable;
+
+public class LoginUsuario implements Serializable{
+	private int idLogin;
+	private String email;
+	private String senha;
+
+	public LoginUsuario() {
+
+	}
+
+	public LoginUsuario(int id, String email, String senha) {
+
+		this.idLogin = id;
+		this.email = email;
+		this.senha = senha;
+	}
+
+	public int getId() {
+		return idLogin;
+	}
+
+	public void setId(int id) {
+		this.idLogin = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	@Override
+	public String toString() {
+		return "LoginUsuario [id=" + idLogin + ", email=" + email + ", senha="
+				+ senha + "]";
+	}
+
+}

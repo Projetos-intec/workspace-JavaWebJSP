@@ -1,0 +1,33 @@
+1410866021743	Delete element
+1410867008024	Convert local variable 'request' to field
+1410867014152	Convert local variable 'dispatcher' to field
+1410867035288	Convert local variable 'response' to field
+1410868979621	Convert local variable 'dispatcher' to field
+1410869053217	Move 1 resources to 'JSP'
+1410869264569	Copy file
+1410869702117	Extract method 'getMsgDay'
+1410869926155	Convert local variable 'calendar' to field
+1410869943022	Convert local variable 'uur' to field
+1410872246701	Convert local variable 'resp' to field
+1410872388126	Convert local variable 'retorno' to field
+1410874836291	Copy file
+1410874842794	Delete element
+1410874847058	Rename resource 'Copy of index.jsp'
+1410875371063	Rename resource 'index.jsp'
+1410947918397	Move 1 resources to 'WebContent'
+1410948706619	Delete element
+1410948863413	Delete element
+1410948882049	Rename package 'be.intec.frituurfrida'
+1410951696222	Encapsulate field 'passwords'
+1410952702931	Rename local variable 'passwords'
+1410964715722	Delete element
+1410966504066	Rename type 'DbConection'
+1410967361566	Delete element
+1410967411623	Delete element
+1410967422884	Copy compilation unit
+1410967426295	Delete element
+1411027521322	Copy file
+1411027541143	Copy file
+1411034065845	Convert local variable 'user' to field
+1411124809391	Delete element
+1411124860334	Rename resource 'register.jsp'

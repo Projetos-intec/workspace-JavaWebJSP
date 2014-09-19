@@ -1,0 +1,12 @@
+package be.intec.frituurfrida.persistence;
+
+public class DbConection {
+
+		private static final String URL = "jdbc:mysql://localhost/e-shopdb";
+		private static final String USERNAME = "root";
+		private static final String PASSWORD = "leaojr1103";
+
+		protected Connection getConnection() throws SQLException {
+			return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		}
+}

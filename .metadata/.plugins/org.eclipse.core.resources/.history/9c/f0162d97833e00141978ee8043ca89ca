@@ -1,0 +1,8 @@
+package be.intec.frituurfrida.model;
+private int id;
+private String email;
+ptivate String senha;
+public abstract class LoginUsuario {
+  
+
+}
