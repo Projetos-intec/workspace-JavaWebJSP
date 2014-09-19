@@ -21,24 +21,27 @@ public class AddUsuario extends HttpServlet {
 	private HttpServletResponse resp;
 	private RequestDispatcher dispatcher;
 	private Usuarios user;
-
+private int indexFormLogin;
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		this.req = req;
 		this.resp = resp;
-
-	
+		indexFormLogin = 1;
 		if (req.getParameter("goTo").equals("login")) {
 			System.out.println("BTn login");
 			logar();
+			
 		} else if (req.getParameter("goTo").equals("register")) {
 			registrar();
+			indexFormLogin = 0;
 			System.out.println("btn regstro");
 		} else if (req.getParameter("goTo").equals("doRegesiter")) {
 			adduser();
 			System.out.println("btn Do regstro");
 		}
+
+		req.setAttribute("showFormLogin", indexFormLogin);
 
 		// if (req.getParameter("email")!= "" && req.getParameter("senha")!=""){
 		//
@@ -83,7 +86,7 @@ public class AddUsuario extends HttpServlet {
 				+ "<input type='hidden' name='goTo' value='doRegesiter'>"
 				+ "<br />  <input type='submit' value='Register User'/>"
 				+ "</form>");
-
+		indexFormLogin = 0;
 		// req.setAttribute("msg2", "redirect");
 		dispatcher = req.getRequestDispatcher(VIEW);
 		dispatcher.forward(req, resp);
@@ -100,7 +103,7 @@ public class AddUsuario extends HttpServlet {
 
 		UserDao userDao = new UserDao();
 		userDao.add(user);
-
+		indexFormLogin = 0;
 		dispatcher = req.getRequestDispatcher(VIEW);
 		dispatcher.forward(req, resp);
 	}

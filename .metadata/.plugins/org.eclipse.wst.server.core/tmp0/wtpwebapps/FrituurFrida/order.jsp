@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	
-	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,23 +31,32 @@
 	<h2>Maak nu uw bestelling online</h2>
 
 	${welkom} ${userLoginName.email} <br />
-
-	<br />
+	
+		${showFormLogin}"
+	
+	
+	
+	<c:if test="${showFormLogin == null}">
+		
+		<br />
 	Login
 	<hr />
 
-	<form action="AddUsuario" method="POST">
-		Email: <input type="email" name="email" /> Senha: <input
-			type="password" name="senha" /> <br />
-		<input type="hidden" name="goTo" value="login"> <input
-			type="submit" value="Login" />
-	</form>
-	<form action="AddUsuario" method="POST">
-		<input type="hidden" name="goTo" value="register"> <input
-			type="submit" value="Register" name="regs" />
 
-	</form>
-	${egFild} <footer>
+
+		<form action="AddUsuario" method="POST">
+			Email: <input type="email" name="email" /> Senha: <input
+				type="password" name="senha" /> <br /> <input type="hidden"
+				name="goTo" value="login"> <input type="submit"
+				value="Login" />
+		</form>
+
+		<form action="AddUsuario" method="POST">
+			<input type="hidden" name="goTo" value="register"> <input
+				type="submit" value="Register" name="regs" />
+
+		</form>
+	</c:if> ${egFild} <footer>
 	<hr />
 	Jonas da Silva - praktijk oefening JSP en Servlets </footer>
 </body>
